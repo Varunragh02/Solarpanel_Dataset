@@ -16,7 +16,7 @@ from collections import Counter
 image_size = (224, 224)
 batch_size = 16
 epochs = 50
-dataset_path = 'D:/Guvi/Solarpanel_Dataset/Samples'  # Update this if needed
+dataset_path = 'D:/Guvi/Solarpanel_Dataset/Samples'  
 
 # 2. Data Preprocessing
 train_datagen = ImageDataGenerator(
@@ -63,7 +63,7 @@ print("Computed class weights:", class_weights_dict)
 
 # 5. Model Architecture
 base_model = MobileNetV2(input_shape=(*image_size, 3), include_top=False, weights='imagenet')
-base_model.trainable = True  # Set to False if you want to freeze the base
+base_model.trainable = True 
 
 model = Sequential([
     base_model,
